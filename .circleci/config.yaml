@@ -1,0 +1,14 @@
+version: 2.1
+
+workflow:
+  build-deploy:
+    jobs:
+      - build
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:21.4.0
+    steps:
+      - checkout
+      - run: node --version
