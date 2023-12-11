@@ -3,11 +3,7 @@ version: 2.1
 workflow:
   build-deploy:
     jobs:
-      - build:
-        filters:
-          branches:
-            only:
-              - main
+      - build
 
 jobs:
   build:
