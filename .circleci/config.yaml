@@ -4,11 +4,12 @@ workflow:
   build-deploy:
     jobs:
       - build
-      - test:
-          override:
-            - echo "done"
+      - test
 
 jobs:
+  test:
+    override:
+      - echo "done"
   build:
     docker:
       - image: cimg/node:21.4.0
