@@ -3,10 +3,10 @@ version: 2.1
 workflow:
   build-deploy:
     jobs:
-      - build
+      - test
 
 jobs:
-  build:
+  test:
     docker:
       - image: cimg/node:21.4.0
     steps:
